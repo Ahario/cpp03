@@ -9,6 +9,7 @@ class ClapTrap{
 		ClapTrap();
 		~ClapTrap();
 		ClapTrap(std::string name);
+		ClapTrap(std::string name, int i, int j, int k);
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
@@ -20,7 +21,6 @@ class ClapTrap{
 		void setEP(int i);
 		int getAD();
 		void setAD(int i);
-		ClapTrap(std::string name, int i, int j, int k);
 	private:
 		std::string name;
 		int	hp;
@@ -35,5 +35,15 @@ class ScavTrap : public ClapTrap {
 		void guardGate();
 	private:
 };
+
+class FragTrap : public ClapTrap {
+	public:
+		FragTrap(std::string name);
+		~FragTrap();
+		void highFivesGuys(void);
+	private:
+
+};
+
 
 #endif
