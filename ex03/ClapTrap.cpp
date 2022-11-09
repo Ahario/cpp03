@@ -98,6 +98,11 @@ ClapTrap::ClapTrap(std::string name, int i, int j, int k)
 	this->ad = k;
 }
 
+ScavTrap::ScavTrap() : ClapTrap(" ", 100, 50, 20)
+{
+	std::cout << "ScavTrap Constructor Called" << std::endl;
+}
+
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20)
 {
 	std::cout << "ScavTrap Constructor Called" << std::endl;
@@ -114,6 +119,11 @@ void ScavTrap::guardGate()
 	std::cout << "is in Gatekeeper mode" << std::endl;
 }
 
+FragTrap::FragTrap() : ClapTrap(" ", 100, 100, 30)
+{
+	std::cout << "FragTrap Constructor Called" << std::endl;
+}
+
 FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)
 {
 	std::cout << "FragTrap Constructor Called" << std::endl;
@@ -128,4 +138,18 @@ void FragTrap::highFivesGuys()
 {
 	std::cout << "FragTrap " << "<" << this->getName() << "> ";
 	std::cout << "gave someone a highfive" << std::endl;
+}
+
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name, 100, 50, 30)
+{
+	std::cout << "DiamondTrap Constructor Called" << std::endl;
+}
+
+DiamondTrap::~DiamondTrap()
+{
+}
+
+void DiamondTrap::whoAmI()
+{
+	std::cout << this->getName() << "_clap_name" << ClapTrap::getName() << std::endl;
 }
