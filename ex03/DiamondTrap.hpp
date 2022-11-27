@@ -5,12 +5,12 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
-class DiamondTrap : virtual ScavTrap, virtual FragTrap{
+class DiamondTrap : public ScavTrap, public FragTrap{
 	public:
 		DiamondTrap(std::string name);
 		~DiamondTrap();
 		void whoAmI();
 	private:
-
+		std::string name;
 };
 #endif
