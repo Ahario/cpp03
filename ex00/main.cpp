@@ -24,4 +24,6 @@ int main()
 	b.attack("BH");
 	b.attack("BH");
 	b.attack("BH");
+	b.beRepaired(10);
+	b.attack("BlackHole");
 }

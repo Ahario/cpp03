@@ -28,33 +28,4 @@ class ClapTrap{
 		int ad;
 };
 
-class ScavTrap : virtual public ClapTrap {
-	public:
-		ScavTrap(std::string name);
-		ScavTrap(void);
-		~ScavTrap(void);
-		void guardGate();
-	private:
-};
-
-class FragTrap : virtual public ClapTrap {
-	public:
-		FragTrap(std::string name);
-		FragTrap(void);
-		~FragTrap(void);
-		void highFivesGuys(void);
-	private:
-
-};
-
-class DiamondTrap : public ScavTrap, public FragTrap {
-	public:
-		DiamondTrap(std::string name);
-		~DiamondTrap(void);
-		void whoAmI(void);
-	private:
-		std::string name;
-};
-
-
 #endif

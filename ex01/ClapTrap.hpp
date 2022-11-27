@@ -28,12 +28,4 @@ class ClapTrap{
 		int ad;
 };
 
-class ScavTrap : public ClapTrap {
-	public:
-		ScavTrap(std::string name);
-		~ScavTrap();
-		void guardGate();
-	private:
-};
-
 #endif
